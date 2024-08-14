@@ -22,11 +22,10 @@
   "description": "A tabletop RPG system where players become newly ascended gods in a world that has lost its previous divine rulers.",
   "authors": [
     {
-      "name": "Your Name",
-      "email": "your.email@example.com",
-      "discord": "your-discord-handle"
+      "name": "Samuel Smith",
+      "email": "samuel.belgarum@gmail.com",
     }
   ],
-  "manifest": "https://github.com/Belgarum/divine-awakening-module/archive/refs/tags/divine.zip",
+  "manifest": "https://raw.githubusercontent.com/Belgarum/awake/main/system.json",
   "download": "https://github.com/Belgarum/divine-awakening-module/archive/refs/tags/divine.zip"
 }

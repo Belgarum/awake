@@ -27,6 +27,6 @@
       "discord": "your-discord-handle"
     }
   ],
-  "manifest": "https://github.com/Belgarum/divine-awakening-module/archive/refs/tags/divine.zip",
+  "manifest": "https://raw.githubusercontent.com/Belgarum/awake/main/system.json",
   "download": "https://github.com/Belgarum/divine-awakening-module/archive/refs/tags/divine.zip"
 }

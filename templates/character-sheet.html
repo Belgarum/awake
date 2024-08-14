@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="styles.css">
+  <script src="main.js"></script>
+  <style>
+    /* Add custom styles for divine challenges and pantheon dynamics here */
+    .character-sheet {
+      font-family: Arial, sans-serif;
+    }
+
+    .sheet-tabs {
+      margin-bottom: 1em;
+    }
+
+    .sheet-tabs button {
+      margin-right: 1em;
+    }
+
+    .tab-content {
+      display: none;
+    }
+
+    .tab-content.active {
+      display: block;
+    }
+
+    /* Add additional styling as needed */
+  </style>
+</head>
+<body>
+  <div class="character-sheet">
+    <h1>Divine Character Sheet</h1>
+    
+    <!-- Tabs for switching between sections -->
+    <div class="sheet-tabs">
+      <button type="button" data-tab="divine-attributes">Divine Attributes</button>
+      <button type="button" data-tab="divine-domains">Divine Domains</button>
+      <button type="button" data-tab="divine-sparks">Divine Sparks</button>
+      <button type="button" data-tab="divine-powers">Divine Powers</button>
+      <button type="button" data-tab="divine-challenges">Divine Challenges</button>
+      <button type="button" data-tab="pantheon-dynamics">Pantheon Dynamics</button>
+    </div>
+
+    <!-- Divine Attributes Section -->
+    <section id="divine-attributes" class="tab-content active">
+      <h2>Divine Attributes</h2>
+      <label for="essence">Divine Essence:</label>
+      <input type="number" id="essence" name="essence">
+      
+      <label for="influence">Celestial Influence:</label>
+      <input type="number" id="influence" name="influence">
+      
+      <label for="mortality">Mortality:</label>
+      <input type="number" id="mortality" name="mortality">
+    </section>
+    
+    <!-- Divine Domains Section -->
+    <section id="divine-domains" class="tab-content">
+      <h2>Divine Domains</h2>
+      <div id="domain-list">
+        <!-- Template for domains will be added dynamically -->
+      </div>
+      <button type="button" id="add-domain">Add Domain</button>
+    </section>
+    
+    <!-- Divine Sparks Section -->
+    <section id="divine-sparks" class="tab-content">
+      <h2>Divine Sparks</h2>
+      <label for="sparks">Sparks Available:</label>
+      <input type="number" id="sparks" name="sparks">
+    </section>
+    
+    <!-- Divine Powers Section -->
+    <section id="divine-powers" class="tab-content">
+      <h2>Divine Powers</h2>
+      <div id="power-list">
+        <!-- Template for powers will be added dynamically -->
+      </div>
+      <button type="button" id="add-power">Add Power</button>
+    </section>
+    
+    <!-- Divine Challenges Section -->
+    <section id="divine-challenges" class="tab-content">
+      <h2>Divine Challenges</h2>
+      <div id="challenge-list">
+        <!-- Template for challenges will be added dynamically -->
+      </div>
+      <button type="button" id="add-challenge">Add Challenge</button>
+    </section>
+    
+    <!-- Pantheon Dynamics Section -->
+    <section id="pantheon-dynamics" class="tab-content">
+      <h2>Pantheon Dynamics</h2>
+      
+      <div class="attribute">
+        <label for="deity-name">Deity Name:</label>
+        <input type="text" id="deity-name" name="deity-name">
+      </div>
+      
+      <div class="attribute">
+        <label for="divine-domain">Divine Domain:</label>
+        <input type="text" id="divine-domain" name="divine-domain">
+      </div>
+      
+      <div class="attribute">
+        <label for="alliances">Alliances:</label>
+        <input type="text" id="alliances" name="alliances">
+      </div>
+      
+      <div class="attribute">
+        <label for="rivalries">Rivalries:</label>
+        <input type="text" id="rivalries" name="rivalries">
+      </div>
+      
+      <div class="attribute">
+        <label for="divine-influence">Divine Influence:</label>
+        <input type="range" id="divine-influence" name="divine-influence" min="0" max="100">
+        <span id="divine-influence-value">50</span>
+      </div>
+      
+      <div class="attribute">
+        <label for="favor-with-mortals">Favor with Mortals:</label>
+        <input type="range" id="favor-with-mortals" name="favor-with-mortals" min="0" max="100">
+        <span id="favor-with-mortals-value">50</span>
+      </div>
+      
+      <div class="attribute">
+        <label for="divine-resources">Divine Resources:</label>
+        <input type="number" id="divine-resources" name="divine-resources">
+      </div>
+      
+      <div class="attribute">
+        <label for="current-divine-challenge">Current Divine Challenge:</label>
+        <input type="text" id="current-divine-challenge" name="current-divine-challenge">
+      </div>
+      
+      <div class="attribute">
+        <label for="recent-events">Recent Events:</label>
+        <input type="text" id="recent-events" name="recent-events">
+      </div>
+      
+      <div class="attribute">
+        <label for="goals-ambitions">Goals and Ambitions:</label>
+        <input type="text" id="goals-ambitions" name="goals-ambitions">
+      </div>
+    </section>
+  </div>
+
+  <script>
+    document.querySelectorAll('.sheet-tabs button').forEach(button => {
+      button.addEventListener('click', event => {
+        const tabId = event.currentTarget.dataset.tab;
+        document.querySelectorAll('.tab-content').forEach(content => {
+          content.classList.toggle('active', content.id === tabId);
+        });
+      });
+    });
+  </script>
+</body>
+</html>
